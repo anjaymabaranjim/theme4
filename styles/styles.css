@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #202020;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p1, p2, p3, p4, p5, p6, a {
+  font-family: 'Source Code Pro', monospace;
+
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+#first-section {
+  background-image: url("../assets/images/DSC_0301_mobile.jpg");
+  background-size: cover;
+  background-position: 0 25%;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-color: #333;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.4s;
+}
+
+#linktree {
+  border-radius: 20px;
+  border: 2px solid #fff;
+
+  padding: 10px;
+
+  width: 70vw;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  transition: 0.4s;
+}
+
+#linktree:hover {
+  background-color: #333333bb;
+}
+
+.link-element {
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 10px;
+  padding: 5px 15px;
+
+  color:  #fff;
+  font-size: 1.2rem;
+}
+
+.link-element:hover {
+  animation: link-element-hover infinite 2s;
+}
+
+.icon-link {
+  display: flex;
+  flex: 1;
+}
+
+@keyframes link-element-hover {
+  0% {
+    background-color: #ffffff00;
+  }
+  50% {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  100% {
+    background-color: #ffffff00;
+  }
+}
+
+@media (min-width: 700px) {
+  #first-section {
+    background-image: url("../assets/images/DSC_0301.JPG");
+    background-position: 50% 25%;
+  }
+
+  #linktree {
+    margin-left: 30vw;
+    width: 40vw;
+  }
+
+  .link-element {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  #linktree {
+    margin-left: 40vw;
+    width: 30vw;
+  }
+
+  .link-element {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  #first-section {
+    background-position: 0% 35%;
+  }
+
+  #linktree {
+    margin-left: 50vw;
+    width: 30vw;
+  }
+
+  .link-element {
+    font-size: 2rem;
+  }
+}
